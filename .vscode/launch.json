@@ -1,0 +1,49 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Unittests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": ["discover", "-s", "./src", "-p", "test_*.py"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python Debugger: Current File with Arguments",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${fileDirname}",
+      "args": "-B"
+    },
+    {
+      "name": "Python Debugger: OpenAI",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "src/run_openai.py",
+      "args": "--use-test-data --excel-file=data/reports/openai.xlsx --report-file=data/reports/openai.md",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python Debugger: Claude",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "src/run_claude.py",
+      "args": "--use-test-data --excel-file=data/reports/claude.xlsx --report-file=data/reports/claude.md",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python Debugger: Gemini",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "src/run_gemini.py",
+      "args": "--use-test-data --excel-file=data/reports/gemini.xlsx --report-file=data/reports/gemini.md",
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+credentials.json
+tokens.json
+token.json
+.DS_Store
+__pycache__
+.vscode/settings.json
+data/threads
+data/processed/thread_*
+data/reports
